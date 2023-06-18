@@ -22,8 +22,24 @@ struct DetailView: View {
             Text("User: \(user.email)")
             Text("User: \(user.phone)")
             
+            MapView()
+                .frame(maxHeight: 400)
+                .cornerRadius(20)
+            
             Spacer()
         }
+        .padding(12)
+    }
+}
+
+// MARK:  Mapkit View
+struct MapView: UIViewRepresentable {
+    func makeUIView(context: Context) -> MKMapView {
+        MKMapView()
+    }
+    
+    func updateUIView(_ uiView: MKMapView, context: Context) {
+        // Configuraciones adicionales del mapa (opcional)
     }
 }
 
