@@ -8,17 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var users: User = []
-    @State private var searchUser = ""
     
-    var filteredUsers: User {
-        guard !searchUser.isEmpty else { return users }
-        return users.filter { $0.name.localizedCaseInsensitiveContains(searchUser)}
-    }
+    @State private var searchQuery = ""
+    @StateObject private var viewModel = ViewModel()
+    
+
     
     var body: some View {
-        NavigationStack {
-            List(filteredUsers, id: \.id) { user in
+        NavigationView {
+            List(viewModel.filteredUsers) { user in
                 HStack {
                     Image(systemName: "person")
                         .resizable()
@@ -37,21 +35,15 @@ struct ContentView: View {
                     }
                 }
             }
-            .task {
-                users = await getUsers()
-            }
-            .searchable(text: $searchUser, prompt: "Search user")
+            .searchable(text: $searchQuery, prompt: "Search user")
+            .onChange(of: searchQuery, perform: { query in
+                viewModel.filterUsers(query: query)
+            })
             .navigationTitle("Users")
         }
     }
     
-    func getUsers() async -> User {
-        let url = URL(string: "https://jsonplaceholder.typicode.com/users")!
-        let (data, _) = try! await URLSession.shared.data(from: url)
-        let decoder = JSONDecoder()
-        decoder.keyDecodingStrategy = .convertFromSnakeCase
-        return try! decoder.decode(User.self, from: data)
-    }
+   
 }
 
 struct ContentView_Previews: PreviewProvider {
