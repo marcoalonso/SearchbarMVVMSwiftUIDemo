@@ -6,3 +6,7 @@ Simple list of getting data from API using MVVM and showing list of users and se
 Filtering users
 
 ![image](https://github.com/marcoalonso/SearchbarMVVMSwiftUIDemo/assets/49013250/51ababe2-788f-411e-b3b2-8968eb1407ce)
+
+Detail View
+![image](https://github.com/marcoalonso/SearchbarMVVMSwiftUIDemo/assets/49013250/f32f6aff-24ce-4778-885f-aec423cacbf8)
+
