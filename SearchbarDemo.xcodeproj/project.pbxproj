@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		6C12AF442A3ECD7D0006D2E3 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C12AF432A3ECD7D0006D2E3 /* ViewModel.swift */; };
+		6C12AF462A3ED2150006D2E3 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C12AF452A3ED2150006D2E3 /* DetailView.swift */; };
 		6CC8D7A52A3CD3E000D49910 /* SearchbarDemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8D7A42A3CD3E000D49910 /* SearchbarDemoApp.swift */; };
 		6CC8D7A72A3CD3E000D49910 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8D7A62A3CD3E000D49910 /* ContentView.swift */; };
 		6CC8D7A92A3CD3E100D49910 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6CC8D7A82A3CD3E100D49910 /* Assets.xcassets */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		6C12AF432A3ECD7D0006D2E3 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		6C12AF452A3ED2150006D2E3 /* DetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		6CC8D7A12A3CD3E000D49910 /* SearchbarDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SearchbarDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6CC8D7A42A3CD3E000D49910 /* SearchbarDemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchbarDemoApp.swift; sourceTree = "<group>"; };
 		6CC8D7A62A3CD3E000D49910 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 				6CC8D7AA2A3CD3E100D49910 /* Preview Content */,
 				6CC8D7B42A3CD40B00D49910 /* Model */,
 				6C12AF432A3ECD7D0006D2E3 /* ViewModel.swift */,
+				6C12AF452A3ED2150006D2E3 /* DetailView.swift */,
 			);
 			path = SearchbarDemo;
 			sourceTree = "<group>";
@@ -154,6 +157,7 @@
 				6CC8D7A72A3CD3E000D49910 /* ContentView.swift in Sources */,
 				6CC8D7A52A3CD3E000D49910 /* SearchbarDemoApp.swift in Sources */,
 				6C12AF442A3ECD7D0006D2E3 /* ViewModel.swift in Sources */,
+				6C12AF462A3ED2150006D2E3 /* DetailView.swift in Sources */,
 				6CC8D7B32A3CD40600D49910 /* ListOfUsers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

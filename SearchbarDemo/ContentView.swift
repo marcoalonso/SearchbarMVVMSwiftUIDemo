@@ -17,23 +17,28 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             List(viewModel.filteredUsers) { user in
-                HStack {
-                    Image(systemName: "person")
-                        .resizable()
-                        .frame(width: 40, height: 40)
-                        .foregroundColor(.white)
-                        .padding(12)
-                        .background(Color.black)
-                        .clipShape(Circle())
+                NavigationLink {
+                    DetailView(user: user)
+                } label: {
+                    HStack {
+                        Image(systemName: "person")
+                            .resizable()
+                            .frame(width: 40, height: 40)
+                            .foregroundColor(.white)
+                            .padding(12)
+                            .background(Color.black)
+                            .clipShape(Circle())
+                            
                         
-                    
-                    VStack {
-                        Text(user.name)
-                            .font(.title2)
-                        Text(user.email)
-                            .font(.title3)
+                        VStack {
+                            Text(user.name)
+                                .font(.title2)
+                            Text(user.email)
+                                .font(.title3)
+                        }
                     }
                 }
+
             }
             .searchable(text: $searchQuery, prompt: "Search user")
             .onChange(of: searchQuery, perform: { query in

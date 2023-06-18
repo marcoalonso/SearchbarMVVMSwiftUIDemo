@@ -7,9 +7,9 @@
 
 import Foundation
 
-typealias ListOfUsers = [Users]
+typealias ListOfUsers = [User]
 
-struct Users: Codable, Identifiable {
+struct User: Codable, Identifiable {
     let id: Int
     let name, username, email: String
     let address: Address
